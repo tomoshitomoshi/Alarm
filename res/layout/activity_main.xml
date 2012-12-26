@@ -5,11 +5,29 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id ="@+id/now_time"
-        android:layout_width="wrap_content"
+        android:id="@+id/now_time"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:text="現在時刻" />
+
+    <Button
+        android:id="@+id/day_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/now_time"
+        android:text="日付選択"
          />
 
+    <Button
+        android:id="@+id/time_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/day_setting"
+        android:text="時間選択"
+     
+         />
+    
 </RelativeLayout>
