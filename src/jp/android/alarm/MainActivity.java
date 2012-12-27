@@ -15,9 +15,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends Activity implements OnClickListener{
 	static TextView timeView;
 	static Button daySetting,timeSetting;
+	TestAct testAct = new TestAct(this);
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,13 +33,16 @@ public class MainActivity extends Activity implements OnClickListener {
 		NowTime();
 		Alarm();
 	}
+	
 	public void onClick(View v){
-		if(v == daySetting){
-			Toast.makeText(MainActivity.this, "日付設定を呼び出す予定", Toast.LENGTH_LONG).show();
-		}else if(v == timeSetting){
-			Toast.makeText(MainActivity.this, "時間設定を呼び出す予定", Toast.LENGTH_LONG).show();
-			}
+			if(v == daySetting){
+				testAct.ToastCall();
+				//Toast.makeText(MainActivity.this, "日付設定を呼び出す予定", Toast.LENGTH_LONG).show();
+			}else if(v == timeSetting){
+				Toast.makeText(MainActivity.this, "時間設定を呼び出す予定", Toast.LENGTH_LONG).show();
+				}
 	}
+	
 	
 	public static void NowTime(){
 		Time time = new Time("Asia/Tokyo");
